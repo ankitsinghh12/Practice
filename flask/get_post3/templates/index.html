@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    <h1>Welcome to the home page</h1>
+
+    <form action="" method="post">                        #this function will perforn an action after we tap on submit button 
+        <label>Email</label>
+        <input type="text" name="in_1">
+        <label>Password</label>
+        <input type="password" name="in_2"><br />         #password is a predefine frunction
+        <input type="Submit" value="SUBMIT">
+
+    </form>    
+
+    <form action="{{ url_for('search_function') }}">
+        <label> Enter something to search</label>
+        <input type="text" name ="q">
+        <button>Submit</button> 
+    </form>
+    
+</body>
+</html>
