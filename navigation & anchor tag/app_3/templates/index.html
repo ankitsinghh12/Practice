@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- for creating navigation bar (heading on the top) -->
+
+    <nav>
+        <a href="index.html"> Home </a>
+        <b href="contact.html"> Contact us </a>
+    </nav>
+
+
+
+
+
+    <h1>Welcome to My Application</h1>
+
+
+    <!-- #to create a form including name and page  -->
+
+    <form action="{{ url_for('thankyou_function') }}" method='post'> 
+        <label> Enter your name:</label><br>
+        <input type="text" name='in_1' placeholder="abc def">
+        <label> Enter your age:</label>
+        <input type="text" name='in_2' placeholder="30"><br><br>
+        <button>Register</button>
+    </form>
+    
+</body>
+</html>
