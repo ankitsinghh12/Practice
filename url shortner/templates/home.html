@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<style>
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(20, 13, 13);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #865a5a;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #35577e;
+  }
+  
+
+  #main-body{
+    margin: auto;
+    width: 75%;
+    margin-top: 75px;
+    padding: 50px;
+    border: 1px solid;
+    /* padding: 10px; */
+    box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+    /* margin: 20px; */
+  }
+
+  </style>
+
+<div id="main-body">
+<div>
+  <form action="/" method="POST">
+    <label>Enter URL</label>
+    <input type="text" name="name" placeholder="https://xyz.com" required>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div>
+  <label>Short URL</label>
+  <input type="text" value="{{s_url}}" id="myInput">
+  <input type="submit" onclick="myFunction()" value="Copy URL">
+</div>
+  
+</div>
+
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+
+  navigator.clipboard.writeText(copyText.value);
+  
+}
+</script>
+{% endblock%}
